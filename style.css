@@ -5,18 +5,20 @@
 }
 
 .gameBoard {
-    width: 80%;
-    height: 500px;
+    width: 100%;
+    height:700px;
+    border-bottom: 50px solid green;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(#2e8fdf, #9ce3ec);
 }
 
 .pipe {
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipeAnimtaion 2s infinite linear;
+    animation: pipeAnimation 1s infinite linear;
 }
 
 .mario {
@@ -27,6 +29,13 @@
 
 .jump {
     animation: jump 500ms ease-out;
+}
+
+.nuvem {
+    position: absolute;
+    animation: nuvemAnimation 15s linear infinite;
+    width: 500px;
+
 }
 
 @keyframes pipeAnimation {
@@ -58,5 +67,16 @@
     
     100% {
         bottom: 0;
+    }
+}
+
+
+@keyframes nuvemAnimation {
+    from {
+        right: -800px;
+    }
+
+    to {
+        right: 100%;
     }
 }
